@@ -109,7 +109,8 @@ def create_engine(
 
 
 def destroy_engine(llm: LLM):
-    """Delete engine and free GPU memory."""
+    """Shut down engine subprocesses and free GPU memory."""
+    llm.llm_engine.engine_core.shutdown()
     del llm
     gc.collect()
     torch.cuda.empty_cache()
