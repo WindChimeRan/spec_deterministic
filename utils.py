@@ -1,7 +1,12 @@
 """Shared utilities for batch invariance and speculative decoding tests."""
 
+import os
+from pathlib import Path
+
 from datasets import load_dataset
 from vllm import LLM, SamplingParams
+
+REPORTS_DIR = Path(__file__).parent / "reports"
 
 
 def load_mt_bench_prompts() -> list[str]:
@@ -146,3 +151,12 @@ def format_comparison_line(
     if num_fail > 3:
         lines.append(f"{prefix}  ... and {num_fail - 3} more")
     return "\n".join(lines)
+
+
+def save_report(report: str, filename: str):
+    """Print report to stdout and save to reports/<filename>."""
+    print(report)
+    REPORTS_DIR.mkdir(exist_ok=True)
+    path = REPORTS_DIR / filename
+    path.write_text(report + "\n")
+    print(f"\nReport saved to {path}")
