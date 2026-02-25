@@ -27,15 +27,15 @@ echo "  GPU: CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
 echo "  $(date)"
 echo "============================================================"
 
-echo ""
-echo ">>> [1/4] Batch invariance ON"
-echo "============================================================"
-python test_batch_invariance.py --batch-invariant
+# echo ""
+# echo ">>> [1/4] Batch invariance ON"
+# echo "============================================================"
+# python test_batch_invariance.py --batch-invariant
 
-echo ""
-echo ">>> [2/4] Batch invariance OFF"
-echo "============================================================"
-python test_batch_invariance.py --no-batch-invariant
+# echo ""
+# echo ">>> [2/4] Batch invariance OFF"
+# echo "============================================================"
+# python test_batch_invariance.py --no-batch-invariant
 
 echo ""
 echo ">>> [3/4] Spec decode + batch invariance ON"

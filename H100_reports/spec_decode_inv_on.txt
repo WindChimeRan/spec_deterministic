@@ -1,0 +1,13 @@
+
+============================================================
+Spec Decode Report  [VLLM_BATCH_INVARIANT=1]
+  Target: Qwen/Qwen3-4B  Draft: Qwen/Qwen3-0.6B  K=3
+------------------------------------------------------------
+  non-spec BS=N vs anchor:       MATCH (80/80)
+  spec BS=1 vs anchor:           MATCH (80/80)
+  spec BS=N vs anchor:           MATCH (80/80)
+------------------------------------------------------------
+  Spec decode metrics: acceptance_rate=0.60, mean_accepted_len=2.79
+------------------------------------------------------------
+  Wall time: 407.8s
+============================================================

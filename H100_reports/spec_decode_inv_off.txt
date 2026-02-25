@@ -1,0 +1,21 @@
+
+============================================================
+Spec Decode Report  [VLLM_BATCH_INVARIANT=0]
+  Target: Qwen/Qwen3-4B  Draft: Qwen/Qwen3-0.6B  K=3
+------------------------------------------------------------
+  non-spec BS=N vs anchor:       NO MATCH (66/80 differ)
+    prompt 0: diverge@pos 4, len anchor=256 vs candidate=256
+    prompt 2: diverge@pos 122, len anchor=256 vs candidate=256
+    prompt 3: diverge@pos 244, len anchor=256 vs candidate=256
+    ... and 63 more
+  spec BS=1 vs anchor:           MATCH (80/80)
+  spec BS=N vs anchor:           NO MATCH (62/80 differ)
+    prompt 0: diverge@pos 4, len anchor=256 vs candidate=256
+    prompt 2: diverge@pos 122, len anchor=256 vs candidate=256
+    prompt 3: diverge@pos 73, len anchor=256 vs candidate=256
+    ... and 59 more
+------------------------------------------------------------
+  Spec decode metrics: acceptance_rate=0.60, mean_accepted_len=2.80
+------------------------------------------------------------
+  Wall time: 248.0s
+============================================================

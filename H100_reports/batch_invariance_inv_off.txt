@@ -1,0 +1,12 @@
+
+============================================================
+Batch Invariance Report  [VLLM_BATCH_INVARIANT=0]
+------------------------------------------------------------
+  BS=N vs BS=1 (anchor):         NO MATCH (66/80 differ)
+    prompt 0: diverge@pos 4, len anchor=256 vs candidate=256
+    prompt 2: diverge@pos 122, len anchor=256 vs candidate=256
+    prompt 3: diverge@pos 244, len anchor=256 vs candidate=256
+    ... and 63 more
+------------------------------------------------------------
+  Wall time: 75.8s
+============================================================
